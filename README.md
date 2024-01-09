@@ -68,3 +68,15 @@ If the official addresses of the above four public datasets are not accessible, 
 ## Released Models
 
 
+## Citations
+
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+```bibtex
+@article{mei2023marstrans,
+  title={Multistage Attention Region Supplement Transformer for Fine-grained Visual Categorization},
+  author={Mei, Aokun and Huo, Hua and Xu, Jiaxin and Xu, Ningya},
+  journal={arXiv preprint arXiv:},
+  year={2023}
+}
+```
+
