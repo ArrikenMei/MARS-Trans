@@ -65,12 +65,12 @@ def main(args):
     # if args.pretrained_dir != "":
     #     assert os.path.exists(args.pretrained_dir), "weights file: '{}' not exist.".format(args.pretrained_dir)
     #     weights_dict = torch.load(args.pretrained_dir, map_location=device)["model"]
-    #     # 删除有关分类类别的权重
+    #     # delete weights
     #     for k in list(weights_dict.keys()):
     #         if "head" in k:
     #             del weights_dict[k]
     #     print(model.load_state_dict(weights_dict, strict=False))
-    # 继续训练
+    # keep training
     if args.pretrained_model is not None:
         pretrained_model = torch.load(args.pretrained_model)
         model.load_state_dict(pretrained_model, strict=False)
@@ -80,7 +80,7 @@ def main(args):
     # model.to(args.device)
     if args.freeze_layers:
         for name, para in model.named_parameters():
-            # 除head, pre_logits外，其他权重全部冻结
+            # All weights are frozen except head, pre_logits
             if "head" not in name and "pre_logits" not in name:
                 para.requires_grad_(False)
             else:
@@ -90,9 +90,9 @@ def main(args):
     optimizer = optim.SGD(pg, lr=args.lr, momentum=0.9, weight_decay=0)
     # Scheduler https://arxiv.org/pdf/1812.01187.pdf
     # lf = lambda x: ((1 + math.cos(x * math.pi / args.epochs)) / 2) * (1 - args.lrf) + args.lrf  # cosine
-    # 余弦退火学习率优化器
+    # Cosine Annealing Learning Rate Optimizer
     t_total = args.num_steps
-    # warm_up是预热步数（步数就是总图片/batchsize），当bs=16，warm_up为500，基本代表第二个epoch开始有学习率
+    # warm_up is the number of warm-up steps (the number of steps is the total image /batchsize). When bs=16, warm_up is 500, which basically means that there is a learning rate at the beginning of the second epoch
     # scheduler = WarmupCosineSchedule(optimizer, warmup_steps=args.warmup_steps, t_total=t_total)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs, eta_min=0, last_epoch=-1)
     # set_seed(args)
@@ -128,25 +128,25 @@ if __name__ == '__main__':
     parser.add_argument('--lr', type=float, default=0.03)
     parser.add_argument('--lrf', type=float, default=0.01)
 
-    # 数据集所在根目录
+    # datasets address
     # https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
     parser.add_argument('--data-path', type=str,
                         default="")
     parser.add_argument('--model-name', default='', help='create model name')
 
-    # 预训练权重路径，如果不想载入就设置为空字符
+    # Pre-trained weight paths, set to null characters if you don't want to load them
     parser.add_argument("--pretrained_dir", type=str, default="ViT-B_16.npz",
                         help="Where to search for pretrained ViT models.")
-    # 继续训练路径
+    # Continue training the loading model path
     parser.add_argument("--pretrained_model", type=str, default=None,
                         help="load pretrained model")
-    # 是否冻结权重
+    # Whether to freeze weights
     parser.add_argument('--freeze-layers', type=bool, default=True)
     parser.add_argument('--device', default='cuda:0', help='device id (i.e. 0 or 0,1 or cpu)')
     #
     parser.add_argument("--num_steps", default=10000, type=int,
                         help="Total number of training epochs to perform.")
-    # 衰减类型——余弦衰减
+    # Decay type - Cosine decay
     parser.add_argument("--decay_type", choices=["cosine", "linear"], default="cosine",
                         help="How to decay the learning rate.")
     parser.add_argument("--warmup_steps", default=500, type=int,
