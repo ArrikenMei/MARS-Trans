@@ -1,7 +1,7 @@
 import torch
 import torchvision
 import torchvision.transforms as transforms
-import TestModel.ViT.config as config
+# import TestModel.ViT.config as config
 from torch.utils.data import DataLoader, RandomSampler, DistributedSampler, SequentialSampler
 from PIL import Image
 
