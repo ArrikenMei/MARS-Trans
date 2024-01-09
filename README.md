@@ -43,6 +43,28 @@ An improved model with Vision Transformer as the backbone called MARS-Trans is n
 <br>
 
 
+## DataSets
+<table border="1" width="90%">
+    <tr align="center">
+        <th>Name</th><th>Class</th><th>Train</th><th>Test</th><th>Download</th><th>Size</th>
+    </tr>
+    <tr align="center">
+        <th>CUB200-2011</th><th>200</th><th>5994</th><th>5794</th><th><a href="https://data.caltech.edu/records/65de6-vp158">https://data.caltech.edu/records/65de6-vp158</a></th><th>1.2GB</th>
+    </tr>
+    <tr align="center">
+        <th>Stanford-Dogs</th><th>196</th><th>9144</th><th>8041</th><th><a href="http://vision.stanford.edu/aditya86/ImageNetDogs/">http://vision.stanford.edu/aditya86/ImageNetDogs/</a></th><th>0.7GB</th>
+    </tr>
+    <tr align="center">
+        <th>Stanford-Cars</th><th>120</th><th>12000</th><th>8580</th><th><a href="http://ai.stanford.edu/~jkrause/cars/car_dataset.html">http://ai.stanford.edu/~jkrause/cars/car_dataset.html</a></th><th>1.8GB</th>
+    </tr>
+    <tr align="center">
+        <th>iNaturalist 2017</th><th>5089</th><th>579184</th><th>95986</th><th><a href="https://tensorflow.google.cn/datasets/catalog/i_naturalist2017">https://tensorflow.google.cn/datasets/catalog/i_naturalist2017</a></th><th>238.1GB</th>
+    </tr>
+</table>
+If the official addresses of the above four public datasets are not accessible, they can be easily obtained from my online storage address <a href="https://pan.baidu.com/s/1A6y98oM1kTIFE5Xn2Qvqqg">link_address</a>  with the password <a href="#">1feg</a>.
+
+
+
 ## Released Models
 
 
