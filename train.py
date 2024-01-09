@@ -9,18 +9,7 @@ import torch.optim.lr_scheduler as lr_scheduler
 import numpy as np
 
 import data_load as data_load
-# import TestModel.ViT.data_load_ffvt as data_load
-# from CNN.TransFG.modeling import VisionTransformer, CONFIGS
-# from CNN.VIT.modeling import VisionTransformer, CONFIGS
-# from CNN.VIT.ori_vit import VisionTransformer, CONFIGS
-# from CNN.EFF_Trans_a_eff.model_final import VisionTransformer, CONFIGS
-# from CNN.EFF_Trans_a_eff.model_new import VisionTransformer, CONFIGS
-from MARS_model.c_AAM import VisionTransformer, CONFIGS
-# from CNN.EFF_Trans_b.model_b_x import VisionTransformer, CONFIGS
-# from CNN.EFF_Trans_c.model_c import VisionTransformer, CONFIGS
-# from CNN.SIM_Trans.modeling import VisionTransformer, CONFIGS
-# from CNN.FFVT.FFVT import VisionTransformer, CONFIGS
-# from scheduler import WarmupLinearSchedule, WarmupCosineSchedule
+from MARS_Trans_model.MAM_RSM_AAM import VisionTransformer, CONFIGS
 from utils import read_split_data, train_one_epoch, evaluate
 
 
