@@ -66,6 +66,24 @@ If the official addresses of the above four public datasets are not accessible, 
 
 
 ## Released Models
+Limited by the experimental conditions, the large number of parameters model was not tested in this network.
+<table border="1" width="90%">
+    <tr align="center">
+        <th>Name</th><th>Pretrain</th><th>acc@1 on CUB</th><th>#param</th><th>Download</th>
+    </tr>
+    <tr align="center">
+        <th>MAM_Base</th><th>ImageNet-21K</th><th>90.9</th><th>86.4m</th><th><a href="#">model_mam.pth</a></th>
+    </tr>
+    <tr align="center">
+        <th>MAM&RSM_Base</th><th>ImageNet-21K</th><th>91.3</th><th>86.4m</th><th><a href="#">model_mam_rsm.pth</a></th>
+    </tr>
+    <tr align="center">
+        <th>AAM_Base</th><th>ImageNet-21K</th><th>90.7</th><th>86.4m</th><th><a href="#">model_aam.pth</a></th>
+    </tr>
+    <tr align="center">
+        <th>MARS-Trans_Base</th><th>ImageNet-21K</th><th>91.9</th><th>86.4m</th><th><a href="#">model_mars.pth</a></th>
+    </tr>
+</table>
 
 
 ## Citations
