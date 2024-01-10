@@ -92,7 +92,6 @@ class MAM(nn.Module):
             x_total[i] = x_min_mul
         return x_total
 
-    """其与head不动，实际不用调用即为不动"""
     def other_multi(self, maxs_list, mins_list, x_total, max_min_t):
         t_list = maxs_list + mins_list
         counter = 0
@@ -105,7 +104,6 @@ class MAM(nn.Module):
             max_min_t = torch.cat([max_min_t, head], dim=2)
         return max_min_t
 
-  # 对reshape后的context_layer进行EFF处理
   # x:(16,785,12,64)
     def forward(self, x):
         num_heads = x.shape[2]
@@ -312,7 +310,6 @@ class Block_new(nn.Module):
         self.ffn = Mlp(config)
         self.attn = Attention(config)
 
-    # 处理108个low_patchs
     def deal_low_patchs(self, w_split_batch, low_patch_indexs, cls):
         for i in low_patch_indexs:
             w_split_batch[i] = cls
