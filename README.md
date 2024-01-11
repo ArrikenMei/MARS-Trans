@@ -72,16 +72,16 @@ Limited by the experimental conditions, the large number of parameters model was
         <th>Name</th><th>Pretrain</th><th>acc@1 on CUB</th><th>#param</th><th>Download</th>
     </tr>
     <tr align="center">
-        <th>MAM_Base</th><th>ImageNet-21K</th><th>90.9</th><th>86.4m</th><th><a href="#">model_mam.pth</a></th>
+        <th>MAM_Base</th><th>ImageNet-21K</th><th>90.9</th><th>86.4m</th><th><a href="https://pan.baidu.com/s/1jRQ_xBfX76gYMEvlBTuf6Q">model_mam.pth</a></th>
     </tr>
     <tr align="center">
-        <th>MAM&RSM_Base</th><th>ImageNet-21K</th><th>91.3</th><th>86.4m</th><th><a href="#">model_mam_rsm.pth</a></th>
+        <th>MAM&RSM_Base</th><th>ImageNet-21K</th><th>91.3</th><th>86.4m</th><th><a href="https://pan.baidu.com/s/1jRQ_xBfX76gYMEvlBTuf6Q">model_mam_rsm.pth</a></th>
     </tr>
     <tr align="center">
-        <th>AAM_Base</th><th>ImageNet-21K</th><th>90.7</th><th>86.4m</th><th><a href="#">model_aam.pth</a></th>
+        <th>AAM_Base</th><th>ImageNet-21K</th><th>90.7</th><th>86.4m</th><th><a href="https://pan.baidu.com/s/1jRQ_xBfX76gYMEvlBTuf6Q">model_aam.pth</a></th>
     </tr>
     <tr align="center">
-        <th>MARS-Trans_Base</th><th>ImageNet-21K</th><th>91.9</th><th>86.4m</th><th><a href="#">model_mars.pth</a></th>
+        <th>MARS-Trans_Base</th><th>ImageNet-21K</th><th>91.9</th><th>86.4m</th><th><a href="https://pan.baidu.com/s/1jRQ_xBfX76gYMEvlBTuf6Q">model_mars.pth</a></th>
     </tr>
 </table>
 
