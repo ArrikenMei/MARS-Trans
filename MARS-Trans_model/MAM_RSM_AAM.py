@@ -329,7 +329,7 @@ class Block_new(nn.Module):
         w = weights
 
         dim2 = w.shape[2]
-        w_without_cls, w_cls = torch.split(w, [dim2-1, 1], dim=2)
+        w_cls, w_without_cls = torch.split(w, [1, dim2-1], dim=2)
 
         w_split_batch = torch.split(w_without_cls, 1, dim=0)
         w_cls_batch = torch.split(w_cls, 1, dim=0)
