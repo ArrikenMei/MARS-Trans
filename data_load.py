@@ -26,9 +26,9 @@ def data_process(height, weight, batch_size):
         transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])])
         # transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
 
-    train_data = torchvision.datasets.ImageFolder(root='E:\\DLmaster\\MyCNN\\datasets\\cub200\\train',
+    train_data = torchvision.datasets.ImageFolder(root='...\\your_dataset_train_path',
                                                   transform=train_transforms)
-    test_data = torchvision.datasets.ImageFolder(root='E:\\DLmaster\\MyCNN\\datasets\\cub200\\test',
+    test_data = torchvision.datasets.ImageFolder(root='...\\your_dataset_test_pat',
                                                  transform=test_transforms)
 
     train_loader = DataLoader(train_data,
