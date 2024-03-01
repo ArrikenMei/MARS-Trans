@@ -331,6 +331,9 @@ class Block_new(nn.Module):
         dim2 = w.shape[2]
         w_cls, w_without_cls = torch.split(w, [1, dim2-1], dim=2)
 
+        # Another strategy is to supplement the image itself
+        # x_cls, x_without_cls = torch.split(x, [1, x.shape[1]-1], dim=2)
+
         w_split_batch = torch.split(w_without_cls, 1, dim=0)
         w_cls_batch = torch.split(w_cls, 1, dim=0)
 
