@@ -1,6 +1,6 @@
 # MARS-Trans: Multistage Attention Region Supplement Transformer for Fine-grained Visual Categorization
 
-An improved model with Vision Transformer as the backbone called MARS-Trans is now used in Fine-grained Visual Categorization and has achieved competitive results across multiple FGVC public datasets. In particular, SOTA was achieved on the Stanford Cars dataset.
+An improved model with Vision Transformer as the backbone called MARS-Trans is now used in Fine-grained Visual Categorization.
 
 ## Introduction
 "MARS-Trans" is a variant model of the Vision Transformer proposed by the Big Data Analysis Lab of the School of Information Engineering, Henan University of Science and Technology.
